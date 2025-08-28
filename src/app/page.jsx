@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { Leaf } from 'lucide-react';
+import { Leaf, LogIn, UserPlus, Mail } from 'lucide-react';
+import Link from 'next/link';
 
 import { AnalysisPanel } from '@/components/analysis-panel';
 import { ErosionMap } from '@/components/erosion-map';
@@ -13,6 +14,10 @@ import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
+  SidebarMenu,
+  SidebarMenuItem,
+  SidebarMenuButton,
+  SidebarSeparator,
 } from '@/components/ui/sidebar';
 
 const initialLocations = [
@@ -47,6 +52,33 @@ const Home = () => {
             setIsLoading={setIsLoading}
             isLoading={isLoading}
           />
+          <SidebarSeparator />
+          <SidebarMenu>
+            <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                    <Link href="/login">
+                        <LogIn />
+                        Login
+                    </Link>
+                </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                    <Link href="/register">
+                        <UserPlus />
+                        Register
+                    </Link>
+                </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+                <SidebarMenuButton asChild>
+                    <Link href="/contact">
+                        <Mail />
+                        Contact
+                    </Link>
+                </SidebarMenuButton>
+            </SidebarMenuItem>
+          </SidebarMenu>
         </SidebarContent>
       </Sidebar>
       <SidebarInset>
