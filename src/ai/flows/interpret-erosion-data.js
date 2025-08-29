@@ -11,6 +11,7 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
+// Define the input and output schemas for the interpretErosionData function
 const InterpretErosionDataInputSchema = z.object({
   soilComposition: z
     .string()
@@ -29,7 +30,7 @@ const InterpretErosionDataInputSchema = z.object({
     .describe('Description of the vegetation cover, including type, density, and health of the vegetation.'),
 });
 
-
+// Define the output schema for the interpretErosionData function
 const InterpretErosionDataOutputSchema = z.object({
   highRiskAreas: z
     .string()
@@ -44,13 +45,15 @@ const InterpretErosionDataOutputSchema = z.object({
     .describe('Specific recommendations for interventions to mitigate erosion risk in the identified high-risk areas.'),
 });
 
-
+//function to interpret soil erosion data
 export async function interpretErosionData(
   input
 ) {
   return interpretErosionDataFlow(input);
 }
 
+
+//Prompt for the interpretErosionData function
 const prompt = ai.definePrompt({
   name: 'interpretErosionDataPrompt',
   input: {schema: InterpretErosionDataInputSchema},
@@ -71,6 +74,7 @@ const prompt = ai.definePrompt({
   Ensure that the output adheres to the schema descriptions.`,
 });
 
+//Flow for the interpretErosionData function
 const interpretErosionDataFlow = ai.defineFlow(
   {
     name: 'interpretErosionDataFlow',

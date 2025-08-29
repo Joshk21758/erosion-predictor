@@ -11,6 +11,7 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
+//Erosion summary form schema
 const GenerateErosionSummaryInputSchema = z.object({
   locationDetails: z
     .string()
@@ -19,7 +20,7 @@ const GenerateErosionSummaryInputSchema = z.object({
     ),
 });
 
-
+//Erosion summary output schema
 const GenerateErosionSummaryOutputSchema = z.object({
   summary: z.string().describe('A summarized report of the key erosion risk factors and estimated soil loss for the specified location.'),
   riskLevel: z.enum(['Low', 'Medium', 'High']).describe('The overall erosion risk level for the location.'),
@@ -27,11 +28,12 @@ const GenerateErosionSummaryOutputSchema = z.object({
   atRiskAreas: z.string().describe('Description of specific areas within the location that are most at risk of erosion.'),
 });
 
-
+//function to generate summary report
 export async function generateErosionSummary(input) {
   return generateErosionSummaryFlow(input);
 }
 
+//Function to output summary prompt
 const generateErosionSummaryPrompt = ai.definePrompt({
   name: 'generateErosionSummaryPrompt',
   input: {schema: GenerateErosionSummaryInputSchema},
