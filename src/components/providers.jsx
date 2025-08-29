@@ -7,7 +7,7 @@ import { AlertTriangle } from 'lucide-react';
 export function Providers({ children }) {
     const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
-    if (!apiKey || apiKey === 'YOUR_API_KEY_HERE') {
+    if (!apiKey || apiKey === 'YOUR_API_KEY_HERE' || apiKey === 'dummy_key') {
         return (
             <div className="flex h-screen w-screen items-center justify-center bg-background text-foreground p-4">
                 <Card className="max-w-md">
@@ -18,7 +18,8 @@ export function Providers({ children }) {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p>The Google Maps API key is missing or invalid. Please get a valid API key from the Google Cloud Console and add it to your <code className="font-code bg-muted p-1 rounded-sm">.env.local</code> file as <code className="font-code bg-muted p-1 rounded-sm">NEXT_PUBLIC_GOOGLE_MAPS_API_KEY</code> to enable map functionality.</p>
+                    <p>The Google Maps API key is missing or invalid. To enable map functionality, please get a valid API key from the Google Cloud Console and add it to a <code className="font-code bg-muted p-1 rounded-sm">.env.local</code> file in your project root with the following content:</p>
+                    <pre className="mt-2 bg-muted p-2 rounded-sm text-sm"><code>NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=YOUR_API_KEY_HERE</code></pre>
                   </CardContent>
                 </Card>
             </div>
