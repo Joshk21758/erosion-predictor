@@ -20,20 +20,20 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="grid gap-2">
               <Label htmlFor="first-name">First name</Label>
-              <Input id="first-name" placeholder="John" />
+              <Input name="first-name" placeholder="Enter your First Name" />
             </div>
             <div className="grid gap-2">
               <Label htmlFor="last-name">Last name</Label>
-              <Input id="last-name" placeholder="Doe" />
+              <Input name="last-name" placeholder="Enter your Last name" />
             </div>
           </div>
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com" />
+            <Input name="email" type="email" placeholder="Enter your Eamil" />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="message">Message</Label>
-            <Textarea id="message" placeholder="Type your message here." className="min-h-[120px]" />
+            <Textarea name="message" placeholder="Type your message here..." className="min-h-[120px]" />
           </div>
         </CardContent>
         <CardFooter>
