@@ -19,11 +19,11 @@ export default function LoginPage() {
         <CardContent className="grid gap-4">
           <div className="grid gap-2">
             <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com" required />
+            <Input name="email" type="email" placeholder="m@example.com" />
           </div>
           <div className="grid gap-2">
             <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" required />
+            <Input name="password" type="password" placeholder="Enter your Password"/>
           </div>
         </CardContent>
         <CardFooter className="flex flex-col">
