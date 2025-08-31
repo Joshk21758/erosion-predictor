@@ -11,28 +11,28 @@ export default function RegisterPage() {
     <div className="flex min-h-screen items-center justify-center bg-background">
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle className="text-3xl">Register</CardTitle>
+          <CardTitle className="text-4xl">Register</CardTitle>
           <CardDescription>
             Create an account to get started.
           </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
           <div className="grid gap-2">
-            <Label>Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com"  />
+            <Label className="label-class">Email</Label>
+            <Input name="email" type="email" placeholder="m@example.com"  />
           </div>
           <div className="grid gap-2">
-            <Label>Password</Label>
-            <Input name="password" type="password" />
+            <Label className="label-class">Password</Label>
+            <Input name="password" type="password" placeholder="Enter your Password"/>
           </div>
            <div className="grid gap-2">
-            <Label>Confirm Password</Label>
-            <Input name="confirm-password" type="password"  />
+            <Label className="label-class">Confirm Password</Label>
+            <Input name="confirmPassword" type="password" placeholder="Re-Enter your Password"/>
           </div>
         </CardContent>
         <CardFooter className="flex flex-col">
           <Button className="w-full">Sign up</Button>
-           <p className="mt-4 text-center text-sm text-muted-foreground">
+           <p className="mt-5 text-center text-sm text-muted-foreground">
             Already have an account?{' '}
             <Link href="/login" className="text-primary underline">
               Sign in

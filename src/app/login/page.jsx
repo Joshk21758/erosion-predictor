@@ -18,11 +18,11 @@ export default function LoginPage() {
         </CardHeader>
         <CardContent className="grid gap-4">
           <div className="grid gap-2">
-            <Label>Email</Label>
+            <Label className="label-class">Email</Label>
             <Input name="email" type="email" placeholder="Enter Your Email" />
           </div>
           <div className="grid gap-2">
-            <Label>Password</Label>
+            <Label className="label-class">Password</Label>
             <Input name="password" type="password" placeholder="Enter your Password"/>
           </div>
         </CardContent>

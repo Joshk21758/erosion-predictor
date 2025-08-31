@@ -1,7 +1,14 @@
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -19,21 +26,25 @@ export default function ContactPage() {
         <CardContent className="grid gap-6">
           <div className="grid grid-cols-2 gap-4">
             <div className="grid gap-2">
-              <Label htmlFor="first-name">First name</Label>
+              <Label className="label-class">First name</Label>
               <Input name="first-name" placeholder="Enter your First Name" />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="last-name">Last name</Label>
+              <Label className="label-class">Last name</Label>
               <Input name="last-name" placeholder="Enter your Last name" />
             </div>
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="email">Email</Label>
+            <Label className="label-class">Email</Label>
             <Input name="email" type="email" placeholder="Enter your Eamil" />
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="message">Message</Label>
-            <Textarea name="message" placeholder="Type your message here..." className="min-h-[120px]" />
+            <Label className="label-class">Message</Label>
+            <Textarea
+              name="message"
+              placeholder="Share your Thoughts..."
+              className="min-h-[120px]"
+            />
           </div>
         </CardContent>
         <CardFooter>

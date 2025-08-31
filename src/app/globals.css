@@ -77,3 +77,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+.label-class{
+  font-size: 14px;
+  font-family: Georgia;
+}
