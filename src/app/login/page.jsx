@@ -11,7 +11,7 @@ export default function LoginPage() {
     <div className="flex min-h-screen items-center justify-center bg-background">
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle className="text-2xl">Login</CardTitle>
+          <CardTitle className="text-4xl">Login</CardTitle>
           <CardDescription>
             Enter your email below to login to your account.
           </CardDescription>
@@ -19,7 +19,7 @@ export default function LoginPage() {
         <CardContent className="grid gap-4">
           <div className="grid gap-2">
             <Label>Email</Label>
-            <Input name="email" type="email" placeholder="m@example.com" />
+            <Input name="email" type="email" placeholder="Enter Your Email" />
           </div>
           <div className="grid gap-2">
             <Label>Password</Label>
@@ -28,7 +28,7 @@ export default function LoginPage() {
         </CardContent>
         <CardFooter className="flex flex-col">
           <Button className="w-full">Sign in</Button>
-          <p className="mt-4 text-center text-sm text-muted-foreground">
+          <p className="mt-7 text-center text-sm text-muted-foreground">
             Don&apos;t have an account?{' '}
             <Link href="/register" className="text-primary underline">
               Sign up
