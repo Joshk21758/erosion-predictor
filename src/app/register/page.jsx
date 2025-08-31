@@ -11,23 +11,23 @@ export default function RegisterPage() {
     <div className="flex min-h-screen items-center justify-center bg-background">
       <Card className="w-full max-w-sm">
         <CardHeader>
-          <CardTitle className="text-2xl">Register</CardTitle>
+          <CardTitle className="text-3xl">Register</CardTitle>
           <CardDescription>
             Create an account to get started.
           </CardDescription>
         </CardHeader>
         <CardContent className="grid gap-4">
           <div className="grid gap-2">
-            <Label htmlFor="email">Email</Label>
-            <Input id="email" type="email" placeholder="m@example.com" required />
+            <Label>Email</Label>
+            <Input id="email" type="email" placeholder="m@example.com"  />
           </div>
           <div className="grid gap-2">
-            <Label htmlFor="password">Password</Label>
-            <Input id="password" type="password" required />
+            <Label>Password</Label>
+            <Input name="password" type="password" />
           </div>
            <div className="grid gap-2">
-            <Label htmlFor="confirm-password">Confirm Password</Label>
-            <Input id="confirm-password" type="password" required />
+            <Label>Confirm Password</Label>
+            <Input name="confirm-password" type="password"  />
           </div>
         </CardContent>
         <CardFooter className="flex flex-col">
