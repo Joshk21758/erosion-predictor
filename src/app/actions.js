@@ -1,13 +1,12 @@
 'use server';
 
 import { generateErosionSummary } from '@/ai/flows/generate-erosion-summary';
+import { getCoordinatesFromLocation } from '@/ai/flows/get-coordinates-from-location';
 import { z } from 'zod';
 
 const formSchema = z.object({
   locationDetails: z.string().min(10, 'Please provide more details about the location.'),
 });
-
-
 
 export async function getErosionSummary(values) {
   const validatedFields = formSchema.safeParse(values);
@@ -18,7 +17,24 @@ export async function getErosionSummary(values) {
   }
 
   try {
-    const output = await generateErosionSummary(validatedFields.data);
+    const [summaryOutput, coordsOutput] = await Promise.all([
+      generateErosionSummary(validatedFields.data),
+      getCoordinatesFromLocation({ location: validatedFields.data.locationDetails })
+    ]);
+
+    if (!summaryOutput || !coordsOutput) {
+        throw new Error('Failed to get complete analysis from AI.');
+    }
+    
+    const output = {
+        ...summaryOutput,
+        name: validatedFields.data.locationDetails.substring(0, 50) + '...', // Truncate for display
+        position: {
+            lat: coordsOutput.latitude,
+            lng: coordsOutput.longitude
+        }
+    };
+    
     return { data: output, error: null };
   } catch (e) {
     console.error('Error generating erosion summary:', e);

@@ -29,10 +29,22 @@ const initialLocations = [
 ];
 
 const Home = () => {
-  const [locations] = useState(initialLocations);
+  const [locations, setLocations] = useState(initialLocations);
   const [analysisResult, setAnalysisResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState(null);
+  
+  const handleAnalysisComplete = (result) => {
+    setAnalysisResult(result);
+    if (result && result.position) {
+        const newLocation = {
+            id: new Date().toISOString(), // unique id
+            ...result,
+        };
+        setLocations(prevLocations => [...prevLocations, newLocation]);
+        setSelectedLocation(newLocation);
+    }
+  }
 
   return (
     <SidebarProvider>
@@ -47,7 +59,7 @@ const Home = () => {
         </SidebarHeader>
         <SidebarContent>
           <AnalysisPanel
-            setResult={setAnalysisResult}
+            setResult={handleAnalysisComplete}
             result={analysisResult}
             setIsLoading={setIsLoading}
             isLoading={isLoading}
