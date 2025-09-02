@@ -36,6 +36,7 @@
     "@radix-ui/react-toast": "^1.2.6",
     "@radix-ui/react-tooltip": "^1.1.8",
     "@vis.gl/react-google-maps": "^1.1.0",
+    "bcrypt": "^6.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
@@ -43,7 +44,9 @@
     "embla-carousel-react": "^8.6.0",
     "firebase": "^11.9.1",
     "genkit": "^1.14.1",
+    "jose": "^6.1.0",
     "lucide-react": "^0.475.0",
+    "mongodb": "^6.19.0",
     "next": "15.3.3",
     "patch-package": "^8.0.0",
     "react": "^18.3.1",
@@ -53,7 +56,7 @@
     "recharts": "^2.15.1",
     "tailwind-merge": "^3.0.1",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.24.2"
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "postcss": "^8",
