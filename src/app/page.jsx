@@ -67,7 +67,7 @@ const Home = () => {
           <SidebarSeparator />
           <SidebarMenu>
             <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild size="lg">
                     <Link href="/login">
                         <LogIn />
                         Login
@@ -75,7 +75,7 @@ const Home = () => {
                 </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild size="lg">
                     <Link href="/register">
                         <UserPlus />
                         Register
@@ -83,7 +83,7 @@ const Home = () => {
                 </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton asChild size="lg">
                     <Link href="/contact">
                         <Mail />
                         Contact
