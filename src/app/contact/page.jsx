@@ -27,11 +27,11 @@ export default function ContactPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="grid gap-2">
               <Label className="label-class">First name</Label>
-              <Input name="first-name" placeholder="Enter your First Name" />
+              <Input name="firstName" placeholder="Enter your First Name" />
             </div>
             <div className="grid gap-2">
               <Label className="label-class">Last name</Label>
-              <Input name="last-name" placeholder="Enter your Last name" />
+              <Input name="lastName" placeholder="Enter your Last name" />
             </div>
           </div>
           <div className="grid gap-2">
