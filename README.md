@@ -1,6 +1,6 @@
 # Erosion Predictor
 
-A web-based Soil Erosion Predictor built with Next.js, the Gemini API model, and the Google Maps JavaScript API. This app helps estimate erosion risk for a selected area and provides visualization and mitigation suggestions.
+A web-based Soil Erosion Predictor built with Next.js, the Gemini API model, and the Google Maps JavaScript API. This app helps estimate erosion risk for a selected area and provides visualization and mitigation suggestions
 
 ## Table of Contents
 
